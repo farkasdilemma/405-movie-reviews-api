@@ -35,7 +35,8 @@ app.layout = html.Div(children=[
                 html.Div(id='movie-title', children=[]),
                 html.Div(id='movie-release', children=[]),
                 html.Div(id='movie-overview', children=[]),
-
+                html.Div(id='movie-overview-sentiment', children=[])
+                
             ], style={ 'padding': '12px',
                     'font-size': '22px',
                     # 'height': '400px',
@@ -86,6 +87,7 @@ def on_click(n_clicks, data):
 @app.callback([Output('movie-title', 'children'),
                 Output('movie-release', 'children'),
                 Output('movie-overview', 'children'),
+                Output('movie-overview-sentiment', 'children'),
                 ],
               [Input('tmdb-store', 'modified_timestamp')],
               [State('tmdb-store', 'data')])
