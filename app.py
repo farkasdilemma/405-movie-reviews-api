@@ -4,7 +4,7 @@ from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 from helpers.key_finder import api_key
 from helpers.api_call import *
-
+from helpers import helper
 
 ########### Define a few variables ######
 
@@ -93,7 +93,7 @@ def on_data(ts, data):
     if ts is None:
         raise PreventUpdate
     else:
-        return data['title'], data['release_date'], data['overview']
+        return data['title'], data['release_date'], data['overview'], helper.sentiment_scores(data['overview'])
 
 
 ############ Deploy
