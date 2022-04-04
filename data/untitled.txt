@@ -1,0 +1,13 @@
+project requirements
+
+imdb data cleaning
+    - will require some consolidation of text fields in order to run tf-idf /vader in order to assess sentiment    
+        1. keywords
+        2. genre
+        3. overview
+        
+        
+sentiment function 
+    - accomodate data formatted appropriately for use in moves
+    
+    - 
