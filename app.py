@@ -98,7 +98,7 @@ def on_data(ts, data):
         raise PreventUpdate
     else:
         sentiment_score = lambda o: '' if len(helper.sentiment_scores(data[o]))<=1 else helper.sentiment_scores(data[o])
-        return data['title'], data['release_date'], data['overview'], \sentiment_score('overview')
+        return data['title'], data['release_date'], data['overview'], \ str(sentiment_score('overview'))
 
 
 ############ Deploy
