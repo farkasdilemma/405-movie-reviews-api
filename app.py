@@ -79,7 +79,7 @@ def on_click(n_clicks, data):
     if n_clicks is None:
         raise PreventUpdate
     elif n_clicks==0:
-        data = {'title':' ', 'release_date':' ', 'overview':' '}
+        data = {'title':' ', 'release_date':' ', 'overview':' ', }
     elif n_clicks>0:
         data = api_pull(random.choice(ids_list))
     return data
@@ -95,7 +95,8 @@ def on_data(ts, data):
     if ts is None:
         raise PreventUpdate
     else:
-        return data['title'], data['release_date'], data['overview'], helper.sentiment_scores(data['overview'])
+        sentiment_score = lambda o: '' if len(helper.sentiment_scores(data[o]))<=1 else helper.sentiment_scores(data[o])
+        return data['title'], data['release_date'], data['overview'], sentiment_score('overview')
 
 
 ############ Deploy
