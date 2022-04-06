@@ -11,7 +11,7 @@ from helpers import helper
 tabtitle = 'Movies'
 sourceurl = 'https://www.kaggle.com/tmdb/tmdb-movie-metadata'
 sourceurl2 = 'https://developers.themoviedb.org/3/getting-started/introduction'
-githublink = 'https://github.com/austinlasseter/tmdb-rf-classifier'
+githublink = 'https://github.com/farkasdilemma/405-movie-reviews-api'
 
 
 
