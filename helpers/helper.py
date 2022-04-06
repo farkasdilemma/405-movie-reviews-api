@@ -39,4 +39,5 @@ def sentiment_scores(sentence):
     response3=f"Sentence rated as {round(sentiment_dict['neu']*100, 2)}% Neutral"
     response4=f"Sentence rated as {round(sentiment_dict['pos']*100,2 )}% Positive"
     response5=f"Sentence Overall Rated As {final}"
-    return response1, response2, response3, response4, response5
+    return response1, response5
+#, response3, response4, response5

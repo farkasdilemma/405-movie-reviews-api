@@ -35,7 +35,9 @@ app.layout = html.Div(children=[
                 html.Div(id='movie-title', children=[]),
                 html.Div(id='movie-release', children=[]),
                 html.Div(id='movie-overview', children=[]),
-                html.Div(id='movie-overview-sentiment', children=[])
+                html.Hr(),
+                html.H2('Sentiment Scoring'),
+                html.Div(id='movie-overview-sentiment', children=[]),
                 
             ], style={ 'padding': '12px',
                     'font-size': '22px',
